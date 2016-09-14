@@ -14,9 +14,10 @@
   margin: 0 auto -35px;
 }
 .work {
-  /*background: url("./morning.png");*/
+  background: url("./night.jpg");
+  background-size: cover;
   background-color: grey;
-  height: 855px;
+  height: 600px;
 }
 .work .container {
   position: relative;

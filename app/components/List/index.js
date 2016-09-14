@@ -11,12 +11,21 @@ import messages from './messages';
 
 import styles from './styles.css';
 
-function List() {
+function List({ header }) {
   return (
-    <div className={styles.list}>
-      <FormattedMessage {...messages.header} />
+    <div className={styles.wrapper}>
+      {header === 'design' &&
+        <FormattedMessage {...messages.header1} />
+      }
+      {header === 'dev' &&
+        <FormattedMessage {...messages.header2} />
+      }
     </div>
   );
 }
+
+List.propTypes = {
+  header: React.PropTypes.string.isRequired,
+};
 
 export default List;

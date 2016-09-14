@@ -6,8 +6,12 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.components.List.header',
-    defaultMessage: 'This is the List component !',
+  header1: {
+    id: 'app.components.List.header1',
+    defaultMessage: 'Design',
+  },
+  header2: {
+    id: 'app.components.List.header2',
+    defaultMessage: 'Desenvolvimento',
   },
 });

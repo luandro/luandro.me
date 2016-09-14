@@ -49,7 +49,8 @@ export default class HomePage extends React.Component { // eslint-disable-line r
           time={time}
           scroll={scroll}
         />
-        <List />
+        <List header="design" />
+        <List header="dev" />
         <Footer />
       </div>
     );
