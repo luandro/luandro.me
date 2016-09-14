@@ -4,14 +4,15 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mxstbr/react-boilerplate.git"
+    "url": "git://github.com/luandro/luandro.me.git"
   },
   "engines": {
     "npm": ">=3"
   },
-  "author": "Max Stoiber",
+  "author": "Luandro",
   "license": "MIT",
   "scripts": {
+    "s3": "npm run build && aws s3 sync ./build s3://luandro.me/ --region sa-east-1",
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "npm run analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
@@ -19,9 +20,9 @@
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
     "preinstall": "npm run npmcheckversion",
     "postinstall": "npm run build:dll",
-    "prebuild": "npm run build:clean && npm run test",
+    "prebuild": "npm run build:clean",
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p",
-    "build:clean": "npm run test:clean && rimraf ./build",
+    "build:clean": "rimraf ./build",
     "build:dll": "node ./internals/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development node server",
     "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
@@ -202,6 +203,7 @@
     "react-router": "2.6.1",
     "react-router-redux": "4.0.5",
     "react-router-scroll": "0.2.1",
+    "react-scroll": "^1.4.0",
     "redux": "3.5.2",
     "redux-immutable": "3.0.7",
     "redux-saga": "0.11.0",

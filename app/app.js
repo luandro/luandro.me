@@ -29,13 +29,13 @@ const ebGaramondObserver = new FontFaceObserver('EB Garamond', {});
 // When Open Sans is loaded, add a font-family using Open Sans to the body
 import styles from 'containers/App/styles.css';
 ubuntuObserver.load().then(() => {
-  console.log('font loaded');
+  // console.log('font loaded');
   document.body.classList.add(styles.fontLoaded);
 }, () => {
   document.body.classList.remove(styles.fontLoaded);
 });
 ebGaramondObserver.load().then(() => {
-  console.log('Garamond font loaded');
+  // console.log('Garamond font loaded');
 });
 // Import i18n messages
 import { translationMessages } from './i18n';

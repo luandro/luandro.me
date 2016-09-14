@@ -69,10 +69,10 @@ function Header({ time, scroll }) {
         easing="easeOutElastic"
         duration={1000}
         direction="alternate"
-        loop={true}
+        loop
         delay={(el, index) => index * 240}
-        translateX='13rem'
-        scale={[.75, .9]}
+        translateX="13rem"
+        scale={[0.75, 0.9]}
       >
         <div style={{ width: 40, height: 40, background: 'blue' }} />
       </Anime>

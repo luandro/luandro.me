@@ -6,30 +6,37 @@
   text-align: center;
   margin: 0 auto;
 }
+
 .container {
   width: 95%;
   margin: 0 auto;
 }
+
 .greeting h1 {
   margin: 0 auto -35px;
   color: #F8FDBA;
 }
-.greeting h2 span:nth-child(2){
+
+.greeting h2 span:nth-child(2) {
   color: #E4E4E7;
 }
+
 .work {
-  background: url("./night.jpg");
+  background: url('./night.jpg');
   background-size: cover;
   background-color: grey;
   height: 600px;
 }
+
 .work .container {
   position: relative;
   top: 230px;
 }
+
 .work h4 {
   margin: 0 auto -35px;
 }
+
 .work h3 {
   font-family: 'EB Garamond', serif;
   color: #F8FDBA;

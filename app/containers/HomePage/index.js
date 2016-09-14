@@ -14,6 +14,8 @@ import Header from 'components/Header';
 import List from 'components/List';
 import Footer from 'components/Footer';
 
+import data from './projects.json';
+
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   state = {
     scroll: window.pageYOffset,
@@ -49,8 +51,8 @@ export default class HomePage extends React.Component { // eslint-disable-line r
           time={time}
           scroll={scroll}
         />
-        <List header="design" />
-        <List header="dev" />
+        <List header="design" data={data} />
+        <List header="dev" data={data} />
         <Footer />
       </div>
     );
