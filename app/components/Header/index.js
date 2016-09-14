@@ -9,10 +9,12 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import FitText from 'react-fittext';
+import Anime from 'react-anime';
+import Navbar from 'components/Navbar';
 
 import styles from './styles.css';
 
-function Header({ time }) {
+function Header({ time, scroll }) {
   const greetingMessage = () => {
     switch (time) {
       case 0:
@@ -58,17 +60,22 @@ function Header({ time }) {
           <FitText compressor={1.5}>
             <h4><FormattedMessage {...messages.work1} /></h4>
           </FitText>
-          <FitText compressor={1}>
+          <FitText compressor={0.9}>
             <h3><FormattedMessage {...messages.work2} /></h3>
           </FitText>
         </div>
       </div>
+      <Anime>
+        <div style={{ width: 40, height: 40, background: 'blue' }} />
+      </Anime>
+      <Navbar sticky={scroll > 1024} />
     </div>
   );
 }
 
 Header.propTypes = {
   time: React.PropTypes.number.isRequired,
+  scroll: React.PropTypes.number.isRequired,
 };
 
 export default Header;

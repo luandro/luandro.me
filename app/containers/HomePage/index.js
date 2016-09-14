@@ -15,6 +15,15 @@ import List from 'components/List';
 import Footer from 'components/Footer';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  state = {
+    scroll: window.pageYOffset,
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
   getTime() {
     const hour = new Date().getHours();
     if (hour > 5 && hour < 13) {
@@ -26,11 +35,20 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     }
     return null;
   }
+  handleScroll = () => {
+    this.setState({
+      scroll: window.pageYOffset,
+    });
+  }
   render() {
+    const { scroll } = this.state;
     const time = this.getTime();
     return (
       <div>
-        <Header time={time} />
+        <Header
+          time={time}
+          scroll={scroll}
+        />
         <List />
         <Footer />
       </div>

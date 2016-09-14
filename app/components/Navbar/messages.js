@@ -6,8 +6,16 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.components.Navbar.header',
-    defaultMessage: 'This is the Navbar component !',
+  item1: {
+    id: 'app.components.Navbar.item1',
+    defaultMessage: 'Design',
+  },
+  item2: {
+    id: 'app.components.Navbar.item2',
+    defaultMessage: 'Desenvolvimento',
+  },
+  item3: {
+    id: 'app.components.Navbar.item3',
+    defaultMessage: 'Curtir',
   },
 });
