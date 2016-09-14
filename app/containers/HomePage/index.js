@@ -10,16 +10,30 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import Header from 'components/Header';
+import List from 'components/List';
+import Footer from 'components/Footer';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
+  getTime() {
+    const hour = new Date().getHours();
+    if (hour > 5 && hour < 13) {
+      return 0;
+    } else if (hour > 13 && hour < 18) {
+      return 1;
+    } else if (hour > 18 && hour < 5) {
+      return 2;
+    }
+    return null;
+  }
   render() {
+    const time = this.getTime();
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div>
+        <Header time={time} />
+        <List />
+        <Footer />
+      </div>
     );
   }
 }
