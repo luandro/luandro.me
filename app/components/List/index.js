@@ -14,12 +14,14 @@ import styles from './styles.css';
 function List({ header }) {
   return (
     <div className={styles.wrapper}>
-      {header === 'design' &&
-        <FormattedMessage {...messages.header1} />
-      }
-      {header === 'dev' &&
-        <FormattedMessage {...messages.header2} />
-      }
+      <div className={styles.header}>
+        {header === 'design' &&
+          <h1><FormattedMessage {...messages.header1} /></h1>
+        }
+        {header === 'dev' &&
+          <h1><FormattedMessage {...messages.header2} /></h1>
+        }
+      </div>
     </div>
   );
 }

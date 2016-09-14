@@ -43,7 +43,7 @@ function Header({ time, scroll }) {
     <div className={styles.wrapper} style={backgroundImage()}>
       <div className={styles.container}>
         <div className={styles.greeting}>
-          <FitText compressor={0.47}>
+          <FitText compressor={0.63}>
             <h1>{greetingMessage()}</h1>
           </FitText>
           <FitText compressor={1.2}>
@@ -65,7 +65,15 @@ function Header({ time, scroll }) {
           </FitText>
         </div>
       </div>
-      <Anime>
+      <Anime
+        easing="easeOutElastic"
+        duration={1000}
+        direction="alternate"
+        loop={true}
+        delay={(el, index) => index * 240}
+        translateX='13rem'
+        scale={[.75, .9]}
+      >
         <div style={{ width: 40, height: 40, background: 'blue' }} />
       </Anime>
       <Navbar sticky={scroll > 1024} />

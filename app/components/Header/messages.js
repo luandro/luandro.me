@@ -24,11 +24,11 @@ export default defineMessages({
   },
   iam2: {
     id: 'app.components.Header.iam2',
-    defaultMessage: 'Lu',
+    defaultMessage: 'Lua',
   },
   iam3: {
     id: 'app.components.Header.iam3',
-    defaultMessage: 'andro',
+    defaultMessage: 'ndro',
   },
   work1: {
     id: 'app.components.Header.work1',
