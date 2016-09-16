@@ -1,5 +1,7 @@
-@value primaryBackground, secondaryBackground, thirdBackground, primaryText, secondaryText, thirdText from theme(colors);
-@value morning, noon, night from theme(backgrounds);
+@value nightPrimaryBackground, nightSecondaryBackground, nightThirdBackground, nightPrimaryText, nightSecondaryText, nightThirdText from theme(night);
+@value morningPrimaryBackground, morningSecondaryBackground, morningThirdBackground, morningPrimaryText, morningSecondaryText, morningThirdText from theme(morning);
+@value noonPrimaryBackground, noonSecondaryBackground, noonThirdBackground, noonPrimaryText, noonSecondaryText, noonThirdText from theme(noon);
+
 
 .wrapper {
   padding-top: 30px;
@@ -9,18 +11,18 @@
 }
 
 .wrapperMorning {
-  background-color: primaryBackground;
-  color: primaryText;
+  background-color: morningPrimaryBackground;
+  color: nightPrimaryText;
 }
 
 .wrapperNoon {
-  background-color: primaryBackground;
-  color: primaryText;
+  background-color: noonPrimaryBackground;
+  color: nightPrimaryText;
 }
 
 .wrapperNight {
-  background-color: primaryBackground;
-  color: primaryText;
+  background-color: nightPrimaryBackground;
+  color: nightPrimaryText;
 }
 
 .container {
@@ -33,19 +35,19 @@
 }
 
 .greetingMorning h1 {
-  color: secondaryText;
+  color: morningSecondaryText;
 }
 
 .greetingNoon h1 {
-  color: secondaryText;
+  color: noonSecondaryText;
 }
 
 .greetingNight h1 {
-  color: secondaryText;
+  color: nightSecondaryText;
 }
 
 .greetingNight h2 span:nth-child(2) {
-  color: thirdText;
+  color: nightThirdText;
 }
 
 .work {
@@ -54,15 +56,15 @@
 }
 
 .workMorning {
-  background: morning;
+  background-image: url('./morning.jpg');
 }
 
 .workNoon {
-  background: noon;
+  background-image: url('./noon.jpg');
 }
 
 .workNight {
-  background: night;
+  background-image: url('./night.jpg');
 }
 
 .work .container {
@@ -79,5 +81,5 @@
 }
 
 .workNight h3 {
-  color: secondaryText;
+  color: nightSecondaryText;
 }
