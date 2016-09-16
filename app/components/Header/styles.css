@@ -1,10 +1,26 @@
+@value primaryBackground, secondaryBackground, thirdBackground, primaryText, secondaryText, thirdText from theme(colors);
+@value morning, noon, night from theme(backgrounds);
+
 .wrapper {
-  background-color: #1A213B;
-  color: #FFE3DA;
   padding-top: 30px;
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
+}
+
+.wrapperMorning {
+  background-color: primaryBackground;
+  color: primaryText;
+}
+
+.wrapperNoon {
+  background-color: primaryBackground;
+  color: primaryText;
+}
+
+.wrapperNight {
+  background-color: primaryBackground;
+  color: primaryText;
 }
 
 .container {
@@ -14,18 +30,39 @@
 
 .greeting h1 {
   margin: 0 auto -35px;
-  color: #F8FDBA;
 }
 
-.greeting h2 span:nth-child(2) {
-  color: #E4E4E7;
+.greetingMorning h1 {
+  color: secondaryText;
+}
+
+.greetingNoon h1 {
+  color: secondaryText;
+}
+
+.greetingNight h1 {
+  color: secondaryText;
+}
+
+.greetingNight h2 span:nth-child(2) {
+  color: thirdText;
 }
 
 .work {
-  background: url('./night.jpg');
   background-size: cover;
-  background-color: grey;
   height: 600px;
+}
+
+.workMorning {
+  background: morning;
+}
+
+.workNoon {
+  background: noon;
+}
+
+.workNight {
+  background: night;
 }
 
 .work .container {
@@ -39,5 +76,8 @@
 
 .work h3 {
   font-family: 'EB Garamond', serif;
-  color: #F8FDBA;
+}
+
+.workNight h3 {
+  color: secondaryText;
 }

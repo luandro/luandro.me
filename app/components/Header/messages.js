@@ -6,8 +6,8 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  day: {
-    id: 'app.components.Header.day',
+  morning: {
+    id: 'app.components.Header.morning',
     defaultMessage: 'Bom dia',
   },
   noon: {

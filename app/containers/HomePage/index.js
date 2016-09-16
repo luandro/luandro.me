@@ -23,9 +23,11 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
+
   getTime() {
     const hour = new Date().getHours();
     if (hour > 5 && hour < 13) {
@@ -37,19 +39,45 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     }
     return null;
   }
+
+  getTimeTheme() {
+    switch (this.getTime()) {
+      case 0:
+        return {
+          name: 'morning',
+          compressor: 0.48,
+        };
+      case 1:
+        return {
+          name: 'noon',
+          compressor: 0.63,
+        };
+      case 2:
+        return {
+          name: 'night',
+          compressor: 0.61,
+        };
+      default:
+        return {
+          name: 'morning',
+          compressor: 0.48,
+        };
+    }
+  }
+
   handleScroll = () => {
     this.setState({
       scroll: window.pageYOffset,
     });
   }
+
   render() {
     const { scroll } = this.state;
-    const time = this.getTime();
     return (
       <div>
         <Header
-          time={time}
           scroll={scroll}
+          theme={this.getTimeTheme()}
         />
         <List header="design" data={data} />
         <List header="dev" data={data} />

@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
@@ -15,9 +16,9 @@ function Navbar({ sticky }) {
   return (
     <div className={styles.wrapper} style={sticky ? { position: 'fixed', top: 0 } : { position: 'static' }}>
       <div className={styles.container}>
-        <a href="#design"><FormattedMessage {...messages.item1} /></a>
-        <a href="#development"><FormattedMessage {...messages.item2} /></a>
-        <a href="#like"><FormattedMessage {...messages.item3} /></a>
+        <Link to="design" spy smooth duration={500}><FormattedMessage {...messages.item1} /></Link>
+        <Link to="development" spy smooth duration={500}><FormattedMessage {...messages.item2} /></Link>
+        <Link to="like" spy smooth duration={500}><FormattedMessage {...messages.item3} /></Link>
       </div>
     </div>
   );
