@@ -1,3 +1,43 @@
-.like { /* stylelint-disable */
+@value nightPrimaryBackground, nightSecondaryBackground, nightThirdBackground, nightPrimaryText, nightSecondaryText, nightThirdText from theme(night);
+@value morningPrimaryBackground, morningSecondaryBackground, morningThirdBackground, morningPrimaryText, morningSecondaryText, morningThirdText from theme(morning);
+@value noonPrimaryBackground, noonSecondaryBackground, noonThirdBackground, noonPrimaryText, noonSecondaryText, noonThirdText from theme(noon);
 
+.wrapper {
+  margin: 21px auto 0;
+  text-align: center;
+}
+
+.top {
+  height: 130px;
+  width: 100%;
+  background: nightPrimaryBackground;
+}
+
+.button {
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  background: nightSecondaryText;
+  border-radius: 50%;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -145px;
+  z-index: 80;
+  position: relative;
+  bottom: 80px;
+}
+
+.button img {
+  height: 60px;
+  z-index: 2;
+}
+
+.bottom {
+  background: #584564;
+  height: 115px;
+  width: 100%;
+  margin-bottom: -1px;
 }

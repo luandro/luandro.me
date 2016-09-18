@@ -2,7 +2,6 @@
 @value morningPrimaryBackground, morningSecondaryBackground, morningThirdBackground, morningPrimaryText, morningSecondaryText, morningThirdText from theme(morning);
 @value noonPrimaryBackground, noonSecondaryBackground, noonThirdBackground, noonPrimaryText, noonSecondaryText, noonThirdText from theme(noon);
 
-
 .wrapper {
   padding-top: 30px;
   text-transform: uppercase;

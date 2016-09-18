@@ -54,7 +54,7 @@ function Header({ theme, scroll }) {
           </FitText>
         </div>
       </div>
-      <Anime
+      {/*<Anime
         easing="easeOutElastic"
         duration={1000}
         direction="alternate"
@@ -64,8 +64,8 @@ function Header({ theme, scroll }) {
         scale={[0.75, 0.9]}
       >
         <div style={{ width: 40, height: 40, background: 'blue' }} />
-      </Anime>
-      <Navbar sticky={scroll > 1024} />
+      </Anime>*/}
+      <Navbar sticky={scroll > 770} theme={theme} />
     </div>
   );
 }

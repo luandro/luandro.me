@@ -2,10 +2,22 @@
   {
     "title": "Festa Anos 80",
     "category": "design",
+    "image": "lunazen-panfletos",
     "type": "cartaz",
     "client": "Pousada Espaçonaves Lunazen",
     "place": "Alto Paraíso de Goiás",
     "state": "GO",
-    "slug": "cartaz-lunazen"
+    "slug": "panfletos-lunazen"
+  },
+  {
+    "title": "Loja Hospedagem Smaga",
+    "image": "smaga",
+    "category": "dev",
+    "type": "e-commerce",
+    "client": "República Sparta",
+    "place": "Viçosa",
+    "state": "MG",
+    "slug": "loja-smaga",
+    "link": "https://repsparta.com"
   }
 ]

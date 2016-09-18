@@ -1,8 +1,25 @@
+@value nightPrimaryBackground, nightSecondaryBackground, nightThirdBackground, nightPrimaryText, nightSecondaryText, nightThirdText from theme(night);
+@value morningPrimaryBackground, morningSecondaryBackground, morningThirdBackground, morningPrimaryText, morningSecondaryText, morningThirdText from theme(morning);
+@value noonPrimaryBackground, noonSecondaryBackground, noonThirdBackground, noonPrimaryText, noonSecondaryText, noonThirdText from theme(noon);
+
 .header {
-  background: #584564;
   padding: 30px 0;
   text-align: center;
-  color: #FFE3DA;
   font-family: 'EB Garamond', serif;
   text-transform: uppercase;
+}
+
+.headerMorning {
+  background: morningSecondaryBackground;
+  color: morningPrimaryText;
+}
+
+.headerNoon {
+  background: noonSecondaryBackground;
+  color: noonPrimaryText;
+}
+
+.headerNight {
+  background: nightSecondaryBackground;
+  color: nightPrimaryText;
 }
