@@ -1,3 +1,28 @@
-.footer { /* stylelint-disable */
+@value nightPrimaryBackground, nightSecondaryBackground, nightThirdBackground, nightPrimaryText, nightSecondaryText, nightThirdText from theme(night);
+@value morningPrimaryBackground, morningSecondaryBackground, morningThirdBackground, morningPrimaryText, morningSecondaryText, morningThirdText from theme(morning);
+@value noonPrimaryBackground, noonSecondaryBackground, noonThirdBackground, noonPrimaryText, noonSecondaryText, noonThirdText from theme(noon);
 
+.wrapper {
+  padding: 25px 0;
+  background: nightPrimaryBackground;
+  color: nightThirdText;
+}
+
+.location {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 0.8em;
+  margin-left: 30px;
+}
+
+.location img {
+  margin-right: 8px;
+}
+
+.mail {
+  font-size: 0.6em;
+  text-align: center;
+  position: relative;
+  top: 15px;
 }
