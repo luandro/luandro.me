@@ -6,8 +6,8 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.components.LikesList.header',
-    defaultMessage: 'This is the LikesList component !',
+  thanks: {
+    id: 'app.components.LikesList.thanks',
+    defaultMessage: 'Obrigado!',
   },
 });

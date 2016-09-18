@@ -13,8 +13,8 @@ import styles from './styles.css';
 
 function LikesList() {
   return (
-    <div className={styles.likesList}>
-      <FormattedMessage {...messages.header} />
+    <div className={styles.wrapper}>
+      <h2><FormattedMessage {...messages.thanks} /></h2>
     </div>
   );
 }

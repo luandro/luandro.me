@@ -1,3 +1,12 @@
-.likesList { /* stylelint-disable */
+.wrapper {
+  background: #EFEFEF;
+  padding: 50px 0;
+  margin-top: -30px;
+  z-index: -1;
+}
 
+.wrapper h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'EB Garamond', serif;
 }
